@@ -1,0 +1,1 @@
+[{"commands_raw":"Я холодильник \n\n?> Привет, холодильник -> fridge","gnode_name":"start","id":0,"name":"start","position":[340,260]},{"commands_raw":"Ёбнутый?\n\n?>... -> start","gnode_name":"fridge","id":1,"name":"fridge","position":[500,200]}]

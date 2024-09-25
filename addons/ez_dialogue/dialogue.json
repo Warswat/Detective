@@ -1,0 +1,62 @@
+[
+	{
+		"commands_raw": "Что ты будешь на ужин?\n\n?> Макароны -> choice 1 node\n?> Суп -> choice 2 node\n?> Ничего -> choice 3 node\n?> Пока -> bye",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			320,
+			260
+		]
+	},
+	{
+		"commands_raw": "Неслипшиеся макароны даже выглядели аппетитно. В добавок к ним мне налили подливу.\n\n?> Выбрать снова -> start\n",
+		"gnode_name": "choice 1 node",
+		"id": 1,
+		"name": "choice 1 node",
+		"position": [
+			500,
+			140
+		]
+	},
+	{
+		"commands_raw": "После моего ответа в тарелку методично наложили пару ложек почти остывшего супа с картошкой и вермишелью\n\n?> Выбрать снова -> start",
+		"gnode_name": "choice 2 node",
+		"id": 2,
+		"name": "choice 2 node",
+		"position": [
+			520,
+			320
+		]
+	},
+	{
+		"commands_raw": "Я не голоден. Довольно плотный обед позволил мне обойтись без ужина\n\n?> Выбрать снова -> start",
+		"gnode_name": "choice 3 node",
+		"id": 3,
+		"name": "choice 3 node",
+		"position": [
+			520,
+			420
+		]
+	},
+	{
+		"commands_raw": "До скорого\n\n",
+		"gnode_name": "bye",
+		"id": 4,
+		"name": "bye",
+		"position": [
+			680,
+			240
+		]
+	},
+	{
+		"commands_raw": "",
+		"gnode_name": "diag node",
+		"id": 5,
+		"name": "Diag Node",
+		"position": [
+			740,
+			140
+		]
+	}
+]

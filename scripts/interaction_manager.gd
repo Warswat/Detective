@@ -11,6 +11,7 @@ var can_interact = true
 
 
 
+
 func register_area(area : InteractionArea):
 	active_areas.append(area)
 

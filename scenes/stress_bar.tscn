@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://1hikahgc2ihe"]
+
+[node name="ProgressBar" type="ProgressBar"]
+custom_minimum_size = Vector2(100, 0)
+offset_right = 4.0
+offset_bottom = 27.0
+show_percentage = false

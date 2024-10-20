@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://cl7xjmjwtncx1"]
+
+[ext_resource type="Texture2D" uid="uid://cllsv6660htmk" path="res://assets/character/Character skin colors/Female Skin1.png" id="1_5jmx6"]
+[ext_resource type="Script" path="res://scripts/female_npc.gd" id="1_wapbv"]
+[ext_resource type="PackedScene" uid="uid://cp2mavj5pu6h8" path="res://scenes/interaction_area.tscn" id="2_vpumy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5r5y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mmyr"]
+atlas = ExtResource("1_5jmx6")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx78y"]
+atlas = ExtResource("1_5jmx6")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfa33"]
+atlas = ExtResource("1_5jmx6")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiwfb"]
+atlas = ExtResource("1_5jmx6")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hni6"]
+atlas = ExtResource("1_5jmx6")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbcgj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mmyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx78y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfa33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiwfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hni6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ke74b"]
+
+[node name="Female_npc" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_wapbv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = -1.5708
+scale = Vector2(0.452171, 0.770835)
+shape = SubResource("RectangleShape2D_n5r5y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_gbcgj")
+autoplay = "default"
+frame = 3
+frame_progress = 0.17372
+
+[node name="interaction_area" parent="." instance=ExtResource("2_vpumy")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction_area"]
+scale = Vector2(2.12941, 2.12941)
+shape = SubResource("CircleShape2D_ke74b")

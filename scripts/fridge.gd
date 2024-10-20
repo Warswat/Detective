@@ -14,8 +14,14 @@ func _process(delta):
 func _on_interact():
 	var dialogue = dialogue_scene.instantiate()
 	dialogue.scale = Vector2(0.5,0.5)
-	dialogue.position = Vector2(-144,27)
+	dialogue.position = Vector2(0,27)
 	dialogue.dialogue_json = FRIGDE_DIALOGUE
+	if $"../CharacterBody2D/Camera2D".get_child_count()>0:
+		$"../CharacterBody2D/Camera2D".get_child(0).queue_free()
+		print($"../CharacterBody2D/Camera2D".get_child_count())
+	else:
+		print('here')
+		$"../CharacterBody2D/Camera2D".add_child(dialogue)
+		print($"../CharacterBody2D/Camera2D".get_child_count())
 	
-	$"../CharacterBody2D/Camera2D".add_child(dialogue)
 	print("Тут пусто")

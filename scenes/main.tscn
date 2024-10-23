@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcn3odxqvxjit"]
+[gd_scene load_steps=14 format=3 uid="uid://bcn3odxqvxjit"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_svrds"]
 [ext_resource type="PackedScene" uid="uid://cw1x84utuojcc" path="res://scenes/character.tscn" id="1_vjhbe"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_pucad"]
-[ext_resource type="PackedScene" uid="uid://biqhjp54c6277" path="res://scenes/menu_window.tscn" id="3_3lv36"]
 [ext_resource type="Texture2D" uid="uid://dwfv70fl75dr3" path="res://assets/world/TopDownHouse_FloorsAndWalls.png" id="3_fof0a"]
+[ext_resource type="PackedScene" uid="uid://c6yhuatse8wfj" path="res://scenes/control.tscn" id="3_uygs6"]
 [ext_resource type="Texture2D" uid="uid://dl10ekws6h52u" path="res://assets/world/TopDownHouse_FurnitureState1.png" id="4_mo5er"]
 [ext_resource type="PackedScene" uid="uid://dqh6b0mpssrv4" path="res://scenes/fridge.tscn" id="5_48khm"]
 [ext_resource type="PackedScene" uid="uid://cl7xjmjwtncx1" path="res://scenes/female_npc.tscn" id="6_ik0xk"]
@@ -1272,17 +1273,18 @@ sources/1 = SubResource("TileSetAtlasSource_roqh4")
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_svrds")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_vjhbe")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(79, -34)
+position = Vector2(76, -41)
 script = ExtResource("2_pucad")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" groups=["Camera"]]
 zoom = Vector2(4, 4)
 
-[node name="Window" parent="CharacterBody2D/Camera2D" instance=ExtResource("3_3lv36")]
+[node name="Control" parent="CharacterBody2D/Camera2D" instance=ExtResource("3_uygs6")]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1327,5 +1329,14 @@ offset_top = 11.0
 offset_right = 41.0
 offset_bottom = 19.0
 
+[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Clues" to="CharacterBody2D/Camera2D/Control/Window" method="_on_clues_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Files" to="CharacterBody2D/Camera2D/Control/Window" method="_on_files_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Prikol" to="CharacterBody2D/Camera2D/Control/Window" method="_on_prikol_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Menu" to="CharacterBody2D/Camera2D/Control/Window" method="_on_menu_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/Menu/Resume" to="CharacterBody2D/Camera2D/Control/Window" method="_on_resume_pressed"]
+[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/Menu/Quit" to="CharacterBody2D/Camera2D/Control/Window" method="_on_quit_pressed"]
 [connection signal="pressed" from="Button" to="Button/RichTextLabel" method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="Button/RichTextLabel" method="_on_button_2_pressed"]
+
+[editable path="CharacterBody2D/Camera2D/Control"]
+[editable path="CharacterBody2D/Camera2D/Control/Window"]

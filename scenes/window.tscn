@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bjfnpvd4y2hx2"]
+
+[node name="Window" type="Window"]
+initial_position = 2
+size = Vector2i(245, 250)
+visible = false
+
+[node name="ControlButtons" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Clues" type="Button" parent="ControlButtons"]
+layout_mode = 2
+text = "Улики"
+
+[node name="Files" type="Button" parent="ControlButtons"]
+layout_mode = 2
+text = "Досье"
+
+[node name="Prikol" type="Button" parent="ControlButtons"]
+layout_mode = 2
+text = "Что-то"
+
+[node name="Menu" type="Button" parent="ControlButtons"]
+layout_mode = 2
+text = "Меню"
+
+[node name="Clues" type="VBoxContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -25.0
+offset_right = 65.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Clues"]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Clues/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Улика 1"
+
+[node name="Label2" type="Label" parent="Clues/HBoxContainer"]
+layout_mode = 2
+text = "Улика 2"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Clues"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Clues/HBoxContainer2"]
+layout_mode = 2
+text = "Улика 3"
+
+[node name="Label4" type="Label" parent="Clues/HBoxContainer2"]
+layout_mode = 2
+text = "Улика 4"
+
+[node name="Files" type="VBoxContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -25.0
+offset_right = 65.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Files"]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Files/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Досье 1"
+
+[node name="Label2" type="Label" parent="Files/HBoxContainer"]
+layout_mode = 2
+text = "Досье 2"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Files"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="Files/HBoxContainer2"]
+layout_mode = 2
+text = "Досье 3"
+
+[node name="Label3" type="Label" parent="Files/HBoxContainer2"]
+layout_mode = 2
+text = "Досье 4"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -11.5
+offset_right = 46.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "RoflanEbalo"
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Продолжить"
+
+[node name="Options" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Настройки"
+
+[node name="Quit" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Выйти"

@@ -1329,14 +1329,5 @@ offset_top = 11.0
 offset_right = 41.0
 offset_bottom = 19.0
 
-[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Clues" to="CharacterBody2D/Camera2D/Control/Window" method="_on_clues_pressed"]
-[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Files" to="CharacterBody2D/Camera2D/Control/Window" method="_on_files_pressed"]
-[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Prikol" to="CharacterBody2D/Camera2D/Control/Window" method="_on_prikol_pressed"]
-[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/ControlButtons/Menu" to="CharacterBody2D/Camera2D/Control/Window" method="_on_menu_pressed"]
-[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/Menu/Resume" to="CharacterBody2D/Camera2D/Control/Window" method="_on_resume_pressed"]
-[connection signal="pressed" from="CharacterBody2D/Camera2D/Control/Window/Menu/Quit" to="CharacterBody2D/Camera2D/Control/Window" method="_on_quit_pressed"]
 [connection signal="pressed" from="Button" to="Button/RichTextLabel" method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="Button/RichTextLabel" method="_on_button_2_pressed"]
-
-[editable path="CharacterBody2D/Camera2D/Control"]
-[editable path="CharacterBody2D/Camera2D/Control/Window"]

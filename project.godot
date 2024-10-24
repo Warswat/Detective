@@ -20,11 +20,6 @@ config/icon="res://icon.svg"
 Global="*res://scripts/global.gd"
 InteractionManager="*res://scenes/interaction_manager.tscn"
 
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/ez_dialogue/plugin.cfg")

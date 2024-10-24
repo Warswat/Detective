@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var window = $CharacterBody2D/Camera2D/Control/Window
+@onready var window = $CharacterBody2D/Camera2D/Control.get_child(0)
 
 var paused = false
 

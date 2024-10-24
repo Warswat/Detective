@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6yhuatse8wfj"]
+[gd_scene load_steps=3 format=3 uid="uid://c6yhuatse8wfj"]
 
 [ext_resource type="PackedScene" uid="uid://bjfnpvd4y2hx2" path="res://scenes/window.tscn" id="1_dtetp"]
 [ext_resource type="Script" path="res://scripts/control.gd" id="1_n4qa5"]
-[ext_resource type="Script" path="res://scripts/window.gd" id="3_l070t"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,12 +13,4 @@ grow_vertical = 2
 script = ExtResource("1_n4qa5")
 
 [node name="Window" parent="." instance=ExtResource("1_dtetp")]
-script = ExtResource("3_l070t")
 
-[node name="ControlButtons" parent="Window" index="0"]
-visible = false
-
-[connection signal="pressed" from="Window/Menu/Resume" to="Window" method="_on_resume_pressed"]
-[connection signal="pressed" from="Window/Menu/Quit" to="Window" method="_on_quit_pressed"]
-
-[editable path="Window"]

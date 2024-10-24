@@ -16,8 +16,8 @@ func _on_interact():
 	dialogue.scale = Vector2(0.5,0.5)
 	dialogue.position = Vector2(0,27)
 	dialogue.dialogue_json = FRIGDE_DIALOGUE
-	if $"../CharacterBody2D/Camera2D".get_child_count()>0:
-		$"../CharacterBody2D/Camera2D".get_child(0).queue_free()
+	if $"../CharacterBody2D/Camera2D".get_child_count()>1:
+		$"../CharacterBody2D/Camera2D".get_child(1).queue_free()
 		print($"../CharacterBody2D/Camera2D".get_child_count())
 	else:
 		print('here')

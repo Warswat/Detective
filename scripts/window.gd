@@ -1,6 +1,6 @@
 extends Window
 
-@onready var main = $"../../../../"
+@onready var main = $".."
 
 @onready var clues = $Clues
 @onready var files = $Files

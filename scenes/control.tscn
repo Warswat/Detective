@@ -13,4 +13,3 @@ grow_vertical = 2
 script = ExtResource("1_n4qa5")
 
 [node name="Window" parent="." instance=ExtResource("1_dtetp")]
-

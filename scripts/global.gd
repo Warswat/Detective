@@ -13,6 +13,7 @@ func _process(delta):
 	pass
 
 
+
 func start_dialogue(inter_state,dialogue_json,inter_state_reset = 'start'):
 	var dialogue = dialogue_scene.instantiate()
 	dialogue.scale = Vector2(0.5,0.5)

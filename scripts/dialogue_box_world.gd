@@ -36,5 +36,5 @@ func restart_dialogue_from_interrogation(interrogation_state):
 
 
 func _on_ez_dialogue_end_of_dialogue_reached():
-	camera_2d.get_child(0).queue_free()
+	camera_2d.get_child(1).queue_free()
 	pass # Replace with function body.

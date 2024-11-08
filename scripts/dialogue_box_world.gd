@@ -27,8 +27,12 @@ func _on_ez_dialogue_custom_signal_received(value):
 		if stress >= 100:
 			pass
 			var stress_popup_obj = stress_popup.instantiate()
+			print(interrogation_state_on_restart)
+			stress_popup_obj.dialogue_json = dialogue_json
 			stress_popup_obj.interrogation_state = interrogation_state_on_restart
 			camera_2d.add_child(stress_popup_obj)
+	else:
+		interrogation_state_on_restart = value
 	pass # Replace with function body.
 
 func restart_dialogue_from_interrogation(interrogation_state):

@@ -1,6 +1,6 @@
 extends Window
 
-
+var dialogue_json = ''
 var interrogation_state = 'start'
 #@onready var female_npc = get_tree().get_first_node_in_group('npc')
 
@@ -15,6 +15,6 @@ func _process(delta):
 
 
 func _on_button_pressed():
-	Global.start_dialogue(interrogation_state,preload("res://addons/female_dialogue.json"))
+	Global.start_dialogue(interrogation_state,dialogue_json)
 	queue_free()
 	pass # Replace with function body.

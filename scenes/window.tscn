@@ -5,7 +5,6 @@
 [node name="Window" type="Window"]
 initial_position = 2
 size = Vector2i(245, 250)
-visible = false
 script = ExtResource("1_d33tg")
 
 [node name="ControlButtons" type="HBoxContainer" parent="."]
@@ -123,6 +122,7 @@ size_flags_horizontal = 4
 text = "RoflanEbalo"
 
 [node name="Menu" type="VBoxContainer" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

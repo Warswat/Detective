@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm4h0550d8piw"]
+
+[ext_resource type="Script" path="res://scripts/open_storage.gd" id="1_j83nh"]
+
+[node name="Panel" type="Panel"]
+offset_right = 25.0
+offset_bottom = 25.0
+script = ExtResource("1_j83nh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 640.0

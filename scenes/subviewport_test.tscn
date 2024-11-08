@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqrpn4mcqb3h8"]
+
+[ext_resource type="Texture2D" uid="uid://cpgwtaf7nbbor" path="res://icon.svg" id="1_fnmod"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8dbxn"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_8dbxn")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="SubViewport"]
+texture = ExtResource("1_fnmod")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.78304)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3des7kpcsroh"]
+
+[ext_resource type="Script" path="res://scripts/female_npc.gd" id="1_ltdl3"]
+[ext_resource type="JSON" path="res://addons/female_dialogue.json" id="2_x2uli"]
+[ext_resource type="PackedScene" uid="uid://cp2mavj5pu6h8" path="res://scenes/interaction_area.tscn" id="3_8h13s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ke74b"]
+
+[node name="AnimatedNPC" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_ltdl3")
+dialogue_json = ExtResource("2_x2uli")
+
+[node name="interaction_area" parent="." instance=ExtResource("3_8h13s")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction_area"]
+scale = Vector2(2.12941, 2.12941)
+shape = SubResource("CircleShape2D_ke74b")

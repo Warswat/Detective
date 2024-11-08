@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjixbayowm25x"]
+
+[ext_resource type="Shader" path="res://shaders/outline.gdshader" id="1_mr8kc"]
+[ext_resource type="Texture2D" uid="uid://cpv5yiwxt6ji3" path="res://assets/character/Character skin colors/Male Skin1.png" id="2_x5d0l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qo4wh"]
+shader = ExtResource("1_mr8kc")
+shader_parameter/line_color = Vector4(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwoeq"]
+atlas = ExtResource("2_x5d0l")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ke38"]
+atlas = ExtResource("2_x5d0l")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vta88"]
+atlas = ExtResource("2_x5d0l")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvwdm"]
+atlas = ExtResource("2_x5d0l")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sscac"]
+atlas = ExtResource("2_x5d0l")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anbce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwoeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ke38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vta88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvwdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sscac")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_qo4wh")
+sprite_frames = SubResource("SpriteFrames_anbce")
+frame = 2
+frame_progress = 0.00476892

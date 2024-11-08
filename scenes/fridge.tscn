@@ -24,7 +24,8 @@ region_enabled = true
 region_rect = Rect2(35, 196, 26, 55)
 
 [node name="interaction_area" parent="." instance=ExtResource("3_hvly4")]
+position = Vector2(0, 23)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interaction_area"]
-position = Vector2(0, 30)
+scale = Vector2(1.33913, 1.40058)
 shape = SubResource("RectangleShape2D_i7ctb")

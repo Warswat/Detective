@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://my5bbudpyr8t"]
+
+[ext_resource type="Texture2D" uid="uid://ljbdlhejigob" path="res://assets/puzzle/table_top_view.jpg" id="1_3tsss"]
+[ext_resource type="Script" path="res://scripts/objects_slot.gd" id="1_sx10s"]
+[ext_resource type="PackedScene" uid="uid://bm4h0550d8piw" path="res://scenes/open_storage.tscn" id="2_ekyyd"]
+[ext_resource type="Texture2D" uid="uid://cpgwtaf7nbbor" path="res://icon.svg" id="4_gj5a7"]
+
+[node name="object_slot" type="Panel"]
+offset_right = 150.0
+offset_bottom = 100.0
+script = ExtResource("1_sx10s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 100.0
+texture = ExtResource("1_3tsss")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Panel" parent="TextureRect" instance=ExtResource("2_ekyyd")]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 25.0
+offset_right = 32.0
+offset_bottom = 50.0
+texture = ExtResource("4_gj5a7")
+
+[node name="Panel2" parent="TextureRect" instance=ExtResource("2_ekyyd")]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 25.0
+offset_right = 69.0
+offset_bottom = 50.0
+
+[node name="Panel3" parent="TextureRect" instance=ExtResource("2_ekyyd")]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 25.0
+offset_right = 108.0
+offset_bottom = 50.0
+
+[node name="Panel4" parent="TextureRect" instance=ExtResource("2_ekyyd")]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 25.0
+offset_right = 145.0
+offset_bottom = 50.0

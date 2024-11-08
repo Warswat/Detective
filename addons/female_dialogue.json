@@ -1,1 +1,82 @@
-[{"commands_raw":"Девушка стоит неподвижно\n\n?>Sample text->start_dopros","gnode_name":"start","id":0,"name":"start","position":[580,340]},{"commands_raw":"Да, конечно\n\n?>Где вы были вчера в 13:00.{\nsignal(20)\n->time\n}\n?>Как вы себя чувствуете?{\nsignal(-5)\n->health\n}\n","gnode_name":"start_dopros","id":1,"name":"start_dopros","position":[740,340]},{"commands_raw":"Что? А, конечно, я была на работе.\n\n\n?>Я кажется поторопился, не хотел отвлекать вас от дел, если что-то вспомните вот мой номер.{\nsignal(-10)\n->number\n}\n?>Вы какая-то нервная, кто-то может подтвердить ваше алиби?\n{\nsignal(30)\n->alibi\n}\n","gnode_name":"time","id":2,"name":"time","position":[920,400]},{"commands_raw":"Я не знаю, наверное неплохо, мы ведь почти не общались.\n\n?>...->end","gnode_name":"health","id":3,"name":"health","position":[920,280]},{"commands_raw":"","gnode_name":"end","id":4,"name":"end","position":[1600,260]},{"commands_raw":"Стойте, я кое-что вспомнила.\n\n?>...->something","gnode_name":"number","id":5,"name":"number","position":[1200,400]},{"commands_raw":"тут что-то есть\n\n#тут добавить заметку в планшет\n?>...->end","gnode_name":"something","id":6,"name":"something","position":[1400,400]},{"commands_raw":"Алиби? Я подозреваемая? Вы наверное ошиблись...\n\n?>Вы ведёте себя как убийца, вы задержаны по подозрению в убийстве\n{\nsignal(40)\n->end\n}","gnode_name":"alibi","id":7,"name":"alibi","position":[1400,660]}]
+[
+	{
+		"commands_raw": "Девушка стоит неподвижно\n\n?>Sample text\n{\nsignal(start_dopros)\n->start_dopros\n}",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			580,
+			340
+		]
+	},
+	{
+		"commands_raw": "Да, конечно\n\n?>Где вы были вчера в 13:00.{\nsignal(20)\n->time\n}\n?>Как вы себя чувствуете?{\nsignal(-5)\n->health\n}\n",
+		"gnode_name": "start_dopros",
+		"id": 1,
+		"name": "start_dopros",
+		"position": [
+			740,
+			340
+		]
+	},
+	{
+		"commands_raw": "Что? А, конечно, я была на работе.\n\n\n?>Я кажется поторопился, не хотел отвлекать вас от дел, если что-то вспомните вот мой номер.{\nsignal(-10)\n->number\n}\n?>Вы какая-то нервная, кто-то может подтвердить ваше алиби?\n{\nsignal(30)\n->alibi\n}\n",
+		"gnode_name": "time",
+		"id": 2,
+		"name": "time",
+		"position": [
+			920,
+			400
+		]
+	},
+	{
+		"commands_raw": "Я не знаю, наверное неплохо, мы ведь почти не общались.\n\n?>...->end",
+		"gnode_name": "health",
+		"id": 3,
+		"name": "health",
+		"position": [
+			920,
+			280
+		]
+	},
+	{
+		"commands_raw": "",
+		"gnode_name": "end",
+		"id": 4,
+		"name": "end",
+		"position": [
+			1600,
+			260
+		]
+	},
+	{
+		"commands_raw": "Стойте, я кое-что вспомнила.\n\n?>...->something",
+		"gnode_name": "number",
+		"id": 5,
+		"name": "number",
+		"position": [
+			1200,
+			400
+		]
+	},
+	{
+		"commands_raw": "тут что-то есть\n\n#тут добавить заметку в планшет\n?>...->end",
+		"gnode_name": "something",
+		"id": 6,
+		"name": "something",
+		"position": [
+			1400,
+			400
+		]
+	},
+	{
+		"commands_raw": "Алиби? Я подозреваемая? Вы наверное ошиблись...\n\n?>Вы ведёте себя как убийца, вы задержаны по подозрению в убийстве\n{\nsignal(40)\n->end\n}",
+		"gnode_name": "alibi",
+		"id": 7,
+		"name": "alibi",
+		"position": [
+			1400,
+			660
+		]
+	}
+]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://be8ekia5c2eck"]
+
+[ext_resource type="FontFile" uid="uid://bx3tlqwoh82al" path="res://assets/fonts/PublicPixel.ttf" id="1_m731m"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_m731m")
+theme_override_font_sizes/font_size = 16
+text = "Продолжить"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_m731m")
+theme_override_font_sizes/font_size = 16
+text = "Настройки"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_m731m")
+theme_override_font_sizes/font_size = 16
+text = "Выйти"

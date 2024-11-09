@@ -14,7 +14,7 @@ var input := Vector2(x_axis,y_axis)
 
 
 func _process(delta):
-	# Add the gravity.
+	
 	
 	move_character(delta)
 	move_and_slide()

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0715y0gnue7y"]
+
+[ext_resource type="FontFile" uid="uid://bx3tlqwoh82al" path="res://assets/fonts/PublicPixel.ttf" id="1_d4l1n"]
+
+[node name="HBoxContainer2" type="HBoxContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_d4l1n")
+theme_override_font_sizes/font_size = 16
+text = "Досье"

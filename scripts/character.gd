@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 #------------------------Константы---------------------
 
-const SPEED = 60.0
+
 
 #------------------------Он реди ссылки на дочерние ноды---------------------
 
@@ -10,7 +10,9 @@ const SPEED = 60.0
 
 var x_axis = Input.get_axis("ui_left","ui_right")
 var y_axis = Input.get_axis("ui_up","ui_down")
-var input := Vector2(x_axis,y_axis)
+var input := Vector2i(x_axis,y_axis)
+var speed = 90.0
+ 
 
 
 func _process(delta):
@@ -26,7 +28,6 @@ func move_character(delta_time : float):
 	
 	
 	input = Vector2(x_axis,y_axis)
-	
 	if x_axis > 0:
 		animated_sprite.flip_h = true
 	if x_axis < 0:
@@ -37,6 +38,11 @@ func move_character(delta_time : float):
 	else:
 		animated_sprite.animation = "default"
 	if input.length() > 1:
-		input = input.normalized()
+		speed = 70
+	else:
+		speed = 90
 	
-	position += input * SPEED * delta_time
+
+	print(input * speed * delta_time)
+	position += (input * speed * delta_time)
+	

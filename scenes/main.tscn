@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bcn3odxqvxjit"]
+[gd_scene load_steps=56 format=3 uid="uid://bcn3odxqvxjit"]
 
 [ext_resource type="PackedScene" uid="uid://cw1x84utuojcc" path="res://scenes/character.tscn" id="1_vjhbe"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_pucad"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b7npplrff7fbs" path="res://assets/TestLevel/Door-Open2.png" id="14_wpitd"]
 [ext_resource type="Texture2D" uid="uid://cbup1i3qthtc" path="res://assets/TestLevel/Bedside-OpenDown.png" id="15_stn3s"]
 [ext_resource type="PackedScene" uid="uid://my5bbudpyr8t" path="res://scenes/object_slot.tscn" id="16_43faj"]
+[ext_resource type="Texture2D" uid="uid://d1fpx7gwx0jkj" path="res://assets/TestLevel/DooRTest.png" id="16_166t4"]
 [ext_resource type="AudioStream" uid="uid://daktneojfdbno" path="res://assets/music/2022-12-31_-_Scene_Of_The_Crime_-_www.FesliyanStudios.com.mp3" id="16_fc7i6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28pjb"]
@@ -1816,6 +1817,7 @@ autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" groups=["Camera"]]
 process_mode = 3
+z_index = 5
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1905,10 +1907,16 @@ position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_j3fd0")
 
 [node name="object_slot" parent="." instance=ExtResource("16_43faj")]
+visible = false
 offset_left = 369.0
 offset_top = 7.0
 offset_right = 519.0
 offset_bottom = 107.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(368, -112)
+texture = ExtResource("16_166t4")
 
 [connection signal="pressed" from="Button" to="Button/RichTextLabel" method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="Button/RichTextLabel" method="_on_button_2_pressed"]

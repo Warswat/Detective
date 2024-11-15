@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://my5bbudpyr8t"]
+[gd_scene load_steps=7 format=3 uid="uid://my5bbudpyr8t"]
 
 [ext_resource type="Texture2D" uid="uid://ljbdlhejigob" path="res://assets/puzzle/table_top_view.jpg" id="1_3tsss"]
 [ext_resource type="Script" path="res://scripts/objects_slot.gd" id="1_sx10s"]
 [ext_resource type="PackedScene" uid="uid://bm4h0550d8piw" path="res://scenes/open_storage.tscn" id="2_ekyyd"]
 [ext_resource type="Texture2D" uid="uid://cpgwtaf7nbbor" path="res://icon.svg" id="4_gj5a7"]
+[ext_resource type="Texture2D" uid="uid://16w1tef768dx" path="res://assets/puzzle/child.webp" id="5_rfgw4"]
+[ext_resource type="FontFile" uid="uid://bx3tlqwoh82al" path="res://assets/fonts/PublicPixel.ttf" id="6_key6k"]
 
 [node name="object_slot" type="Panel"]
 offset_right = 150.0
@@ -40,6 +42,7 @@ offset_left = 83.0
 offset_top = 25.0
 offset_right = 108.0
 offset_bottom = 50.0
+texture = ExtResource("5_rfgw4")
 
 [node name="Panel4" parent="TextureRect" instance=ExtResource("2_ekyyd")]
 layout_mode = 0
@@ -47,5 +50,24 @@ offset_left = 120.0
 offset_top = 25.0
 offset_right = 145.0
 offset_bottom = 50.0
+texture = ExtResource("5_rfgw4")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -33.0
+offset_right = 28.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_key6k")
+theme_override_font_sizes/font_size = 8
+text = "Submit"
 
 [connection signal="panels_changed" from="." to="." method="_on_panels_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

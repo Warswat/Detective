@@ -31,17 +31,20 @@ func _drop_data(at_position, data):
 	print("Сбросил")
 	#Поменять местами текстуры
 	var panel = data[1]
-	print(data[1].get_child(0).texture)
-	print(data[0])
-	print(panel.get_child(0).texture)#откуда, текстура1 до смены
+	#print(data[1].get_child(0).texture)
+	#print(data[0])
+	#print(panel.get_child(0).texture)#откуда, текстура1 до смены
 	panel.get_child(0).texture = $TextureRect.texture
-	print(panel.get_child(0).texture)#куда, текстура1 после смены
+	panel.texture = $TextureRect.texture
+	
+	#print(panel.get_child(0).texture)#куда, текстура1 после смены
 	#data[1].get_child(0) = $TextureRect.texture
-	print(data[0])
+	#print(data[0])
+	#print(panel.name)
 	$TextureRect.texture = data[0]
 	texture = $TextureRect.texture
 	$TextureRect.size = $".".size
-	object_slot.panels_changed.emit()
+	#object_slot.panels_changed.emit()
 	
 	
 

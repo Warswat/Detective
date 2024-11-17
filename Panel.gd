@@ -16,7 +16,7 @@ var smthng_container = preload("res://scenes/Smthng_container.tscn")
 
 func _ready():
 	for button in button_list:
-		button.custom_minimum_size.x = panel.size.x / button_list.size() * 0.95
+		button.custom_minimum_size.x = panel.size.x / button_list.size()
 		button.custom_minimum_size.y = panel.size.y * 0.2
 	$VBoxContainer.add_child(menu_container.instantiate())
 	button_4.disabled = true

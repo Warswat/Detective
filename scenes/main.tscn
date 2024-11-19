@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bcn3odxqvxjit"]
+[gd_scene load_steps=64 format=3 uid="uid://bcn3odxqvxjit"]
 
 [ext_resource type="Texture2D" uid="uid://b0wjyo8u6ld0f" path="res://assets/TestLevel/ASSETS_FOR_TEST_separate.png" id="1_munoo"]
 [ext_resource type="PackedScene" uid="uid://cw1x84utuojcc" path="res://scenes/character.tscn" id="1_vjhbe"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://d1fpx7gwx0jkj" path="res://assets/TestLevel/DooRTest.png" id="16_166t4"]
 [ext_resource type="AudioStream" uid="uid://daktneojfdbno" path="res://assets/music/2022-12-31_-_Scene_Of_The_Crime_-_www.FesliyanStudios.com.mp3" id="16_fc7i6"]
 [ext_resource type="PackedScene" uid="uid://cqrpn4mcqb3h8" path="res://scenes/subviewport_test.tscn" id="19_gejex"]
+[ext_resource type="Texture2D" uid="uid://bwugsiwi1nubx" path="res://assets/TestLevel/NewSprite.png" id="20_qatir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tar6o"]
 atlas = ExtResource("1_munoo")
@@ -1818,6 +1819,10 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k6oo"]
+atlas = ExtResource("20_qatir")
+region = Rect2(6, 0, 51, 64)
+
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
 
@@ -1966,6 +1971,11 @@ offset_top = -92.0
 offset_right = 825.0
 offset_bottom = -92.0
 scale = Vector2(0.502953, 0.500555)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(452, -113)
+texture = SubResource("AtlasTexture_1k6oo")
 
 [connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
 [connection signal="pressed" from="Button" to="Button/RichTextLabel" method="_on_button_pressed"]

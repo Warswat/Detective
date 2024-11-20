@@ -10,8 +10,9 @@ extends Panel
 
 
 var menu_container = preload("res://scenes/MenuContainer.tscn")
-var clues_container = preload("res://scenes/Clues_container.tscn")
-var files_container = preload("res://scenes/Files_container.tscn")
+var clues_container = preload("res://scenes/Clues.tscn")
+var files_container = preload("res://scenes/FileTest.tscn")
+#var files_container2 = preload("res://scenes/FileTest2.tscn")
 var smthng_container = preload("res://scenes/Smthng_container.tscn")
 
 func _ready():
@@ -43,6 +44,7 @@ func _on_button_2_pressed():
 		button.disabled = false
 	$VBoxContainer.get_child(1).queue_free()
 	$VBoxContainer.add_child(files_container.instantiate())
+	#$VBoxContainer.add_child(files_container2.instantiate())
 	button_2.disabled = true
 
 

@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://be8ekia5c2eck"]
+[gd_scene load_steps=7 format=3 uid="uid://be8ekia5c2eck"]
 
 [ext_resource type="Script" path="res://scenes/MenuContainer.gd" id="1_3y8ub"]
 [ext_resource type="FontFile" uid="uid://bx3tlqwoh82al" path="res://assets/fonts/PublicPixel.ttf" id="1_m731m"]
+[ext_resource type="StyleBox" uid="uid://by5yidpwu3rxs" path="res://assets/UI/ButtonStyle.tres" id="3_5dlsj"]
+[ext_resource type="StyleBox" uid="uid://bp7iy5nuotkm0" path="res://assets/UI/HoverStyleButton.tres" id="4_fd0bn"]
+[ext_resource type="StyleBox" uid="uid://uriksl0ccja4" path="res://assets/UI/PressedStyleButton.tres" id="5_h0f7p"]
+[ext_resource type="StyleBox" uid="uid://56i7kihatf35" path="res://assets/UI/DisabledStyleButton.tres" id="6_ax8qi"]
 
 [node name="VBoxContainer" type="VBoxContainer"]
 size_flags_horizontal = 4
@@ -9,21 +13,37 @@ size_flags_vertical = 6
 script = ExtResource("1_3y8ub")
 
 [node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 25)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_m731m")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = ExtResource("3_5dlsj")
+theme_override_styles/hover = ExtResource("4_fd0bn")
+theme_override_styles/pressed = ExtResource("5_h0f7p")
+theme_override_styles/disabled = ExtResource("6_ax8qi")
 text = "Продолжить"
 
 [node name="Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 25)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_m731m")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = ExtResource("3_5dlsj")
+theme_override_styles/hover = ExtResource("4_fd0bn")
+theme_override_styles/pressed = ExtResource("5_h0f7p")
+theme_override_styles/disabled = ExtResource("6_ax8qi")
 text = "Настройки"
 
 [node name="Button3" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 25)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_m731m")
 theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = ExtResource("3_5dlsj")
+theme_override_styles/hover = ExtResource("4_fd0bn")
+theme_override_styles/pressed = ExtResource("5_h0f7p")
+theme_override_styles/disabled = ExtResource("6_ax8qi")
 text = "Выйти"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

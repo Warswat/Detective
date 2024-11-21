@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://sxwmqkhtwj4h"]
+
+[ext_resource type="Texture2D" uid="uid://b0wjyo8u6ld0f" path="res://assets/TestLevel/ASSETS_FOR_TEST_separate.png" id="1_m7fur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq58o"]
+atlas = ExtResource("1_m7fur")
+region = Rect2(166, 166, 18, 22)
+
+[node name="BoxContainer" type="BoxContainer"]
+offset_right = 18.0
+offset_bottom = 22.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qq58o")

@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://6fytk802f5dw"]
+[gd_scene load_steps=8 format=3 uid="uid://6fytk802f5dw"]
 
 [ext_resource type="Script" path="res://Panel.gd" id="1_xubc3"]
 [ext_resource type="FontFile" uid="uid://bx3tlqwoh82al" path="res://assets/fonts/PublicPixel.ttf" id="2_wsu22"]
-[ext_resource type="StyleBox" uid="uid://dkp3rhgmige8e" path="res://assets/UI/new_style_box_flat.tres" id="3_bgs02"]
+[ext_resource type="StyleBox" uid="uid://by5yidpwu3rxs" path="res://assets/UI/ButtonStyle.tres" id="3_hp2gw"]
+[ext_resource type="StyleBox" uid="uid://bp7iy5nuotkm0" path="res://assets/UI/HoverStyleButton.tres" id="4_43n7i"]
+[ext_resource type="StyleBox" uid="uid://uriksl0ccja4" path="res://assets/UI/PressedStyleButton.tres" id="5_y1ush"]
+[ext_resource type="StyleBox" uid="uid://56i7kihatf35" path="res://assets/UI/DisabledStyleButton.tres" id="6_e3kq6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qtbd"]
 bg_color = Color(0.206885, 0.63352, 0.91685, 1)
@@ -52,31 +55,44 @@ size_flags_vertical = 4
 theme_override_constants/separation = 0
 
 [node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wsu22")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = ExtResource("3_bgs02")
+theme_override_styles/normal = ExtResource("3_hp2gw")
+theme_override_styles/hover = ExtResource("4_43n7i")
+theme_override_styles/pressed = ExtResource("5_y1ush")
+theme_override_styles/disabled = ExtResource("6_e3kq6")
 text = "Улики"
 
 [node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wsu22")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = ExtResource("3_bgs02")
+theme_override_styles/normal = ExtResource("3_hp2gw")
+theme_override_styles/hover = ExtResource("4_43n7i")
+theme_override_styles/pressed = ExtResource("5_y1ush")
+theme_override_styles/disabled = ExtResource("6_e3kq6")
 text = "Досье"
 
 [node name="Button3" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wsu22")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = ExtResource("3_bgs02")
+theme_override_styles/normal = ExtResource("3_hp2gw")
+theme_override_styles/hover = ExtResource("4_43n7i")
+theme_override_styles/pressed = ExtResource("5_y1ush")
+theme_override_styles/disabled = ExtResource("6_e3kq6")
 text = "Что-то"
 
 [node name="Button4" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wsu22")
 theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = ExtResource("3_bgs02")
+theme_override_styles/normal = ExtResource("3_hp2gw")
+theme_override_styles/hover = ExtResource("4_43n7i")
+theme_override_styles/pressed = ExtResource("5_y1ush")
+theme_override_styles/disabled = ExtResource("6_e3kq6")
 text = "Меню"
 
 [connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/Button" to="Panel" method="_on_button_pressed"]

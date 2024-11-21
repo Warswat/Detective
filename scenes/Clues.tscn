@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://l8ods4m232s8"]
+
+[ext_resource type="Script" path="res://scripts/Clues.gd" id="1_f5ur4"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+custom_minimum_size = Vector2(640, 320)
+size_flags_vertical = 8
+alignment = 1
+script = ExtResource("1_f5ur4")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "+"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+columns = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

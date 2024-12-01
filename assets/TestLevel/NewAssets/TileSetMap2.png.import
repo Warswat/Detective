@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7npplrff7fbs"
-path="res://.godot/imported/Door-Open2.png-29280732d70a8d18414d3580d4e47a5c.ctex"
+uid="uid://dbn741pb1i6u3"
+path="res://.godot/imported/TileSetMap2.png-a9cefe45ffed3a3181285088db1997b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TestLevel/Door-Open2.png"
-dest_files=["res://.godot/imported/Door-Open2.png-29280732d70a8d18414d3580d4e47a5c.ctex"]
+source_file="res://assets/TestLevel/NewAssets/TileSetMap2.png"
+dest_files=["res://.godot/imported/TileSetMap2.png-a9cefe45ffed3a3181285088db1997b6.ctex"]
 
 [params]
 

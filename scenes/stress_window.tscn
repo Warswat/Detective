@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfi4indv3nk4p"]
 
-[ext_resource type="Script" path="res://scenes/stress_popup.gd" id="1_0ka1e"]
+[ext_resource type="Script" path="res://scripts/stress_popup.gd" id="1_0ka1e"]
 [ext_resource type="FontFile" uid="uid://bx3tlqwoh82al" path="res://assets/fonts/PublicPixel.ttf" id="1_05xjb"]
 
 [node name="Stress_window" type="Window"]

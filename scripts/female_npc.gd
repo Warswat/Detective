@@ -4,8 +4,8 @@ extends StaticBody2D
 @onready var interaction_area = $interaction_area
 var used = false
 var dialogue_scene = preload("res://scenes/dialogue_box.tscn")
-@onready var animated_sprite = find_children("*","AnimatedSprite2D")[0]
-@onready var all_animations = animated_sprite.sprite_frames.get_animation_names()
+#@onready var animated_sprite = find_children("*","AnimatedSprite2D")[0]
+#@onready var all_animations = animated_sprite.sprite_frames.get_animation_names()
 #Потом нужно сделать шаблон для диалогов
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,17 +17,17 @@ func _process(delta):
 	pass
 
 func _on_interact():
-	if "open" in all_animations and not used and not animated_sprite.is_playing():
-		animated_sprite.animation = "open"
-		animated_sprite.play()
-		used = true
-	elif "close" in all_animations and used and not animated_sprite.is_playing():
-		animated_sprite.animation = "close"
-		animated_sprite.play()
-		used = false
-	if find_children("*","AnimatedSprite2D"):
-		print("found")
-	print(animated_sprite.sprite_frames.get_animation_names())
+	#if "open" in all_animations and not used and not animated_sprite.is_playing():
+		#animated_sprite.animation = "open"
+		#animated_sprite.play()
+		#used = true
+	#elif "close" in all_animations and used and not animated_sprite.is_playing():
+		#animated_sprite.animation = "close"
+		#animated_sprite.play()
+		#used = false
+	#if find_children("*","AnimatedSprite2D"):
+		#print("found")
+	#print(animated_sprite.sprite_frames.get_animation_names())
 	Global.start_dialogue('start',dialogue_json)
 	
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gpo6q87q12qo"
-path="res://.godot/imported/PC-Sleptmode.png-e6b3c4a0970eb61210ebd94e6d42b04b.ctex"
+uid="uid://djkpxsqmpf011"
+path="res://.godot/imported/NewSpriteInColor.png-aaf70b5db157b2ab453ad2887122eb78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TestLevel/PC-Sleptmode.png"
-dest_files=["res://.godot/imported/PC-Sleptmode.png-e6b3c4a0970eb61210ebd94e6d42b04b.ctex"]
+source_file="res://assets/TestLevel/NewAssets/NewSpriteInColor.png"
+dest_files=["res://.godot/imported/NewSpriteInColor.png-aaf70b5db157b2ab453ad2887122eb78.ctex"]
 
 [params]
 

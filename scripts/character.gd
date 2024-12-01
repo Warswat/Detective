@@ -41,9 +41,10 @@ func move_character(delta_time : float):
 		input.round()
 	else:
 		speed = 60
-	if $"../Path2D/PathFollow2D".position.x < position.x - 10:
+	print([$"../Path2D/PathFollow2D".global_position.x, global_position.x])
+	if $"../Path2D/PathFollow2D".global_position.x < global_position.x - 10:
 		$"../Path2D/PathFollow2D".position.x += 60 * delta_time
-	elif $"../Path2D/PathFollow2D".position.x > position.x + 10:
+	elif $"../Path2D/PathFollow2D".global_position.x > global_position.x + 10:
 		$"../Path2D/PathFollow2D".position.x -= 60 * delta_time
 	position += (input * speed * delta_time)
 	

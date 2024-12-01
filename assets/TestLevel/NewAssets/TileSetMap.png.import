@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwugsiwi1nubx"
-path="res://.godot/imported/NewSprite.png-ff0d7bff55398b204175495eb535f533.ctex"
+uid="uid://dxm8kcpfauebd"
+path="res://.godot/imported/TileSetMap.png-bc177bd3c240da6a4ec8ee604bdde217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TestLevel/NewSprite.png"
-dest_files=["res://.godot/imported/NewSprite.png-ff0d7bff55398b204175495eb535f533.ctex"]
+source_file="res://assets/TestLevel/NewAssets/TileSetMap.png"
+dest_files=["res://.godot/imported/TileSetMap.png-bc177bd3c240da6a4ec8ee604bdde217.ctex"]
 
 [params]
 
